@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          cache: 'yarn'
+      - name: Install
+        run: yarn install --frozen-lockfile || yarn install
+      - name: Build
+        env:
+          PUBLIC_PATH: /
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: yarn build
+      - name: Upload dist artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
