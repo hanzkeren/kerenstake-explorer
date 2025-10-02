@@ -20,8 +20,9 @@ import { $themeColors } from '@themeConfig'
 // import { SigningStargateClient } from '@cosmjs/stargate'
 // import PingWalletClient from './data/signing'
 import { SigningStargateClient } from '@cosmjs/stargate'
-import { getSigningClient } from './client/SigningEthermintClient.ts'
-import EthereumLedgerSigner from './client/EthereumLedgerSigner.ts'
+// Use web stubs to avoid TS compile issues on server build
+import { getSigningClient } from './client/SigningEthermintClient.web'
+import EthereumLedgerSigner from './client/EthereumLedgerSigner.web'
 import SigningKeplerEthermintClient from './client/SigningKeplrEthermintClient'
 
 dayjs.extend(localeData)
