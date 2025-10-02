@@ -1,2 +1,8 @@
-> 1%
-last 2 versions
+# Target modern browsers only to avoid legacy bundle
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Edge versions
+last 2 Safari versions
+not ie <= 11
+not op_mini all
+not safari <= 10
