@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 // const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 // const productionGzipExtensions = ['js', 'css']
@@ -51,15 +50,11 @@ module.exports = {
     },
     plugins: [
       new NodePolyfillPlugin(),
-      new BundleAnalyzerPlugin({
-        analyzerMode: 'disabled',
-        openAnalyzer: false,
-      }),
       // new CompressionWebpackPlugin({
-      //   test: new RegExp(`\\.(${productionGzipExtensions.join('|')})$`),
-      //   threshold: 8192,
-      //   minRatio: 0.8,
-      // }),
+        //   test: new RegExp(`\\.(${productionGzipExtensions.join('|')})$`),
+        //   threshold: 8192,
+        //   minRatio: 0.8,
+        // }),
     ],
   },
   chainWebpack: config => {
