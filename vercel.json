@@ -1,11 +1,16 @@
 {
   "version": 2,
   "installCommand": "yarn install --frozen-lockfile || yarn install",
-  "buildCommand": "yarn build",
+  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider yarn build",
   "env": {
     "PUBLIC_PATH": "/"
   },
   
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--openssl-legacy-provider"
+    }
+  },
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
