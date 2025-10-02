@@ -1,16 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist",
-        "installCommand": "yarn install --frozen-lockfile || yarn install",
-        "buildCommand": "yarn build"
-      }
-    }
-  ],
+  "installCommand": "yarn install --frozen-lockfile || yarn install",
+  "buildCommand": "yarn build",
   "env": {
     "PUBLIC_PATH": "/"
   },
