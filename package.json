@@ -5,6 +5,10 @@
   "author": {
     "name": "ping.pub"
   },
+  "engines": {
+    "node": "16.x"
+  },
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
