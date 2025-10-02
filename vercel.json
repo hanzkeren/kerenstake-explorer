@@ -4,14 +4,17 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": {
+        "distDir": "dist",
+        "installCommand": "yarn install --frozen-lockfile || yarn install",
+        "buildCommand": "yarn build"
+      }
     }
   ],
   "env": {
     "PUBLIC_PATH": "/"
   },
-  "installCommand": "yarn install --frozen-lockfile || yarn install",
-  "buildCommand": "yarn build",
+  
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
