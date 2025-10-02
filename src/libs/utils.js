@@ -23,7 +23,7 @@ import { SigningStargateClient } from '@cosmjs/stargate'
 // Use web stubs to avoid TS compile issues on server build
 import { getSigningClient } from './client/SigningEthermintClient.web'
 import EthereumLedgerSigner from './client/EthereumLedgerSigner.web'
-import SigningKeplerEthermintClient from './client/SigningKeplrEthermintClient'
+import SigningKeplerEthermintClient from './client/SigningKeplrEthermintClient.web'
 
 dayjs.extend(localeData)
 dayjs.extend(duration)
