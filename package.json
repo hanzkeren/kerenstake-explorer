@@ -6,7 +6,7 @@
     "name": "ping.pub"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "packageManager": "yarn@1.22.22",
   "scripts": {
